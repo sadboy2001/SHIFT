@@ -3,10 +3,10 @@ import React from 'react';
 const RecordScreen: React.FC = () => {
   return (
     <div className="flex flex-col flex-1 overflow-y-auto pb-4">
-      <h1 className="text-3xl font-bold text-black px-4 pt-4 pb-3">Запись тренировки</h1>
+      <h1 className="text-3xl font-bold text-black px-4 pt-4 pb-3">Разбор от ИИ</h1>
 
       {/* Video area with AI tracking overlay */}
-      <div className="mx-4 rounded-2xl overflow-hidden relative bg-gray-800">
+      <div className="mx-4 rounded-2xl overflow-hidden relative bg-gray-800 shadow-video">
         <img
           src="/images/tennis-player-tracking.jpg"
           alt="Tennis player"
@@ -90,13 +90,13 @@ const RecordScreen: React.FC = () => {
 
       {/* Buttons */}
       <div className="px-4 mt-4 flex flex-col gap-3">
-        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2 transition-colors">
+        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-button hover:shadow-button-hover">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
           </svg>
           Загрузить видео
         </button>
-        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2 transition-colors">
+        <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg py-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-button hover:shadow-button-hover">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
           </svg>

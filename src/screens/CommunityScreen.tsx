@@ -188,15 +188,15 @@ const CommunityScreen: React.FC = () => {
           <div className="px-4 mt-6 mb-4">
             <h2 className="text-lg font-bold text-gray-900 mb-3">Твоя статистика</h2>
             <div className="grid grid-cols-3 gap-3">
-              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center">
+              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center shadow-stat">
                 <p className="text-2xl font-bold text-purple-600">5</p>
                 <p className="text-xs text-gray-500">Место</p>
               </div>
-              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center">
+              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center shadow-stat">
                 <p className="text-2xl font-bold text-green-600">10</p>
                 <p className="text-xs text-gray-500">Серия</p>
               </div>
-              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center">
+              <div className="bg-white rounded-xl border border-gray-200 p-3 text-center shadow-stat">
                 <p className="text-2xl font-bold text-yellow-600">5</p>
                 <p className="text-xs text-gray-500">Бейджей</p>
               </div>

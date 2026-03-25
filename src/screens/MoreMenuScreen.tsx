@@ -1,13 +1,12 @@
 import React from 'react';
 
 interface MoreMenuScreenProps {
-  onNavigate: (screen: 'menu' | 'training' | 'analysis') => void;
+  onNavigate: (screen: 'menu' | 'training') => void;
 }
 
 const MoreMenuScreen: React.FC<MoreMenuScreenProps> = ({ onNavigate }) => {
   const menuItems = [
     { id: 1, title: 'План тренировок', subtitle: 'Создай свой план', icon: '🎾', onClick: () => onNavigate('training') },
-    { id: 2, title: 'Разбор от Тренера', subtitle: 'Анализ видео с ИИ', icon: '🎥', onClick: () => onNavigate('analysis') },
   ];
 
   const settingsItems = [
