@@ -2,24 +2,13 @@ import React, { useState } from 'react';
 import RecordScreen from './screens/RecordScreen';
 import TrainerScreen from './screens/TrainerScreen';
 import CommunityScreen from './screens/CommunityScreen';
-import MoreMenuScreen from './screens/MoreMenuScreen';
 import TrainingPlanScreen from './screens/TrainingPlanScreen';
 import KnowledgeBaseScreen from './screens/KnowledgeBaseScreen';
 
 type Tab = 'ai' | 'training' | 'knowledge' | 'profile' | 'more';
-type MoreScreen = 'menu' | 'training';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<Tab>('ai');
-  const [moreScreen, setMoreScreen] = useState<MoreScreen>('menu');
-
-  const handleMoreNavigate = (screen: MoreScreen) => {
-    setMoreScreen(screen);
-  };
-
-  const handleBack = () => {
-    setMoreScreen('menu');
-  };
 
   const renderScreen = () => {
     switch (activeTab) {
@@ -32,18 +21,9 @@ const App: React.FC = () => {
       case 'profile':
         return <CommunityScreen />;
       case 'more':
-        return renderMoreScreen();
-      default:
-        return <RecordScreen />;
-    }
-  };
-
-  const renderMoreScreen = () => {
-    switch (moreScreen) {
-      case 'training':
         return <TrainingPlanScreen />;
       default:
-        return <MoreMenuScreen onNavigate={handleMoreNavigate} />;
+        return <RecordScreen />;
     }
   };
 
@@ -53,23 +33,7 @@ const App: React.FC = () => {
       <div className="w-full max-w-[430px] bg-white min-h-screen flex flex-col relative shadow-xl">
         {/* Screen content */}
         <div className="flex-1 flex flex-col overflow-y-auto pb-24">
-          {activeTab === 'more' && moreScreen !== 'menu' ? (
-            <div>
-              <div className="px-4 pt-4 pb-2 flex items-center gap-3">
-                <button 
-                  onClick={handleBack}
-                  className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-                >
-                  <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              </div>
-              {renderScreen()}
-            </div>
-          ) : (
-            renderScreen()
-          )}
+          {renderScreen()}
         </div>
 
         {/* Bottom Navigation */}
