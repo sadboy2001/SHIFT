@@ -200,7 +200,7 @@ const TrainerScreen: React.FC = () => {
   return (
     <div className="flex flex-col flex-1 overflow-y-auto pb-4">
       <div className="px-4 pt-4 pb-3">
-        <h1 className="text-3xl font-bold text-black">Тренер</h1>
+        <h1 className="text-3xl font-bold text-black">Тренеры</h1>
         <p className="text-gray-500 text-sm mt-1">Найди своего тренера</p>
       </div>
 
