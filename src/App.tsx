@@ -54,7 +54,7 @@ const App: React.FC = () => {
             <span className="text-[10px] font-medium">База</span>
           </button>
 
-          {/* Тренировки - Мяч с волной движения */}
+          {/* Тренеры */}
           <button
             onClick={() => setActiveTab('training')}
             className={`flex flex-col items-center gap-0.5 px-2 py-1 min-w-[56px] transition-colors ${
@@ -62,12 +62,12 @@ const App: React.FC = () => {
             }`}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <circle cx="12" cy="14" r="5" />
-              <path d="M12 9 Q8 7 8 3" />
-              <path d="M12 9 Q16 7 16 3" />
-              <circle cx="12" cy="14" r="2" />
+              <circle cx="12" cy="7" r="3" />
+              <path d="M5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2" />
+              <rect x="8" y="2" width="8" height="3" rx="1" />
+              <path d="M9 5v2M15 5v2" />
             </svg>
-            <span className="text-[10px] font-medium">Тренировки</span>
+            <span className="text-[10px] font-medium">Тренеры</span>
           </button>
 
           {/* AI Button - Center, Elevated - Искра ИИ */}
@@ -88,7 +88,7 @@ const App: React.FC = () => {
             </button>
           </div>
 
-          {/* Профиль - Теннисист */}
+          {/* Сообщество — группа людей */}
           <button
             onClick={() => setActiveTab('profile')}
             className={`flex flex-col items-center gap-0.5 px-2 py-1 min-w-[56px] transition-colors ${
@@ -96,13 +96,12 @@ const App: React.FC = () => {
             }`}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <circle cx="12" cy="7" r="3" />
-              <path d="M12 10v3" />
-              <path d="M8 21v-2a4 4 0 018 0v2" />
-              <path d="M18 17l3-3" />
-              <circle cx="21" cy="14" r="2" />
+              <circle cx="9" cy="7" r="2.5" />
+              <circle cx="17" cy="7" r="2.5" />
+              <path d="M2 21v-1.5a4.5 4.5 0 019 0V21" />
+              <path d="M14 21v-1.5a4.5 4.5 0 019 0V21" />
             </svg>
-            <span className="text-[10px] font-medium">Профиль</span>
+            <span className="text-[10px] font-medium">Сообщество</span>
           </button>
 
           {/* План - Календарь с мячом */}
